@@ -237,10 +237,17 @@ ___
 
 # 13. Looping Structures
 
-???
+## For loops
+used to loop through code while within a range of numbers
 
+for i in range(x, z)
 
+## While loops
+used to loop through code while a condition is not met
 
+Must be careful and remember to increment the variable so your loop doesn't run forever
+
+while i > 0
 
 
 ___
@@ -480,3 +487,36 @@ ___ -->
 
 * [Markdown Cheatsheet](https://gist.github.com/jonschlinkert/5854601)
 * [description](http://example.com)
+
+# About
+This is a test repo for AP CSP.
+
+Leave a blank line for a line break.
+
+## Formatting
+Here is **bold text**. (ctrl + B)
+
+Here is *italic text*. (ctrl + I)
+
+you can also use _'s in place of *'s.
+Here is ***bold italic text***.
+
+Bullet list:
+* Item 1
+* Item 2
+* Item 3
+
+Heres a [link](https://test.com).
+
+|col1   |  col2  |
+ |---|---|
+ | r1c1 | r1c2 |
+ | r2c1 | r2c2 |
+
+ #### There are six levels of headings (6#)
+
+ Here is a highlighted `keyword`.
+
+ ```java
+ System.out.println("Hello!");
+ ```
