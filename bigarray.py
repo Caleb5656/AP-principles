@@ -24,6 +24,10 @@ def main():
 
     print("\n\nThe middle number is: ",nums[middle], "\n")
 
+    avg = (nums[0]+nums[middle]+nums[len(nums) - 1])/3
+
+    print("The average of the first middle and last is: ", avg, "\n")
+
     min = 100
     max = 0
     for num in nums:
@@ -96,38 +100,40 @@ def main():
 
 if __name__ == "__main__":
     main()
-# The original list is:  [22, 55, 85, 82, 78, 84, 74, 77, 75, 75, 23, 53, 53, 70, 75, 76, 38, 41, 71]
+# The original list is:  [25, 48, 21, 46, 60, 50, 88, 85, 39, 52, 35, 51, 73, 87, 78, 80, 85, 56, 29]
 #
 # List with a for each loop is:
-# 22 55 85 82 78 84 74 77 75 75 23 53 53 70 75 76 38 41 71
+# 25 48 21 46 60 50 88 85 39 52 35 51 73 87 78 80 85 56 29
 #
-# The middle number is:  75
+# The middle number is:  52
 #
-# min and max switched:  [85, 55, 22, 82, 78, 84, 74, 77, 75, 75, 23, 53, 53, 70, 75, 76, 38, 41, 71]
+# The average of the first middle and last is:  35.333333333333336
 #
-# The list with number inserted into middle is:  [85, 55, 22, 82, 78, 84, 74, 77, 75, 1, 75, 23, 53, 53, 70, 75, 76, 38, 41, 71]
+# min and max switched:  [25, 48, 88, 46, 60, 50, 21, 85, 39, 52, 35, 51, 73, 87, 78, 80, 85, 56, 29]
 #
-# The array values plus ten is:  [95, 65, 32, 92, 88, 94, 84, 87, 85, 11, 85, 33, 63, 63, 80, 85, 86, 48, 51, 81]
+# The list with number inserted into middle is:  [25, 48, 88, 46, 60, 50, 21, 85, 39, 4, 52, 35, 51, 73, 87, 78, 80, 85, 56, 29]
 #
-# The third number of the array was:  32
+# The array values plus ten is:  [45, 58, 98, 66, 70, 60, 31, 95, 49, 14, 62, 35, 61, 83, 97, 88, 90, 95, 56, 39]
+#
+# The third number of the array was:  98
 #
 # The numbers in the 50's are:
-# 5 11 33 48
+# 45 5 31 49 14 35 39
 #
 # The multiples of four in the list are:
-# 92 88 84 80 48
+# 60 88 56
 #
-# The list contains 60?:  False
+# The list contains 60?:  True
 #
 # The list front to back is:  False
 #
-# The amount of numbers more than the average is:  12
+# The amount of numbers more than the average is:  11
 #
-# Number of even numbers:  7
+# Number of even numbers:  9
 #
-# The original list is:  [95, 65, 5, 92, 88, 94, 84, 87, 85, 11, 85, 33, 63, 63, 80, 85, 86, 48, 51, 81]
+# The original list is:  [45, 58, 5, 66, 70, 60, 31, 95, 49, 14, 62, 35, 61, 83, 97, 88, 90, 95, 56, 39]
 #
-# The reversed list is:  [81, 51, 48, 86, 85, 80, 63, 63, 33, 85, 11, 85, 87, 84, 94, 88, 92, 5, 65, 95]
+# The reversed list is:  [39, 56, 95, 90, 88, 97, 83, 61, 35, 62, 14, 49, 95, 31, 60, 70, 66, 5, 58, 45]
 #
-# The rotated list is:  [81, 95, 65, 5, 92, 88, 94, 84, 87, 85, 11, 85, 33, 63, 63, 80, 85, 86, 48, 51]
-# The total of all the elements is:  1381
+# The rotated list is:  [39, 45, 58, 5, 66, 70, 60, 31, 95, 49, 14, 62, 35, 61, 83, 97, 88, 90, 95, 56]
+# The total of all the elements is:  1199
