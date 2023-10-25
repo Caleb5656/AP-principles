@@ -167,7 +167,17 @@ ___
 
 # 8. Conditional Operators
 
-???
+b == d   b is equal to d (Not the same as =)
+
+b != d   b is not equal to d
+
+b > d    b is more than d
+
+b < d    b is less than d
+
+b <= d   b is less than or equal to d
+
+b >= d   b is more than or equal to d
 
 
 
@@ -181,7 +191,13 @@ ___
 
 # 9. Logic Operators
 
-???
+b and d  condition is true if each part of the **_and_** is true
+
+b or d   condition is true if at least one part of the **_or_** is true
+
+b not d  condition is true if b is true and d is false
+
+
 
 
 
@@ -223,7 +239,9 @@ ___
 
 # 12. Random Generation
 
-???
+from random import randint 
+
+num = randint((Low end number), (High end number))
 
 
 

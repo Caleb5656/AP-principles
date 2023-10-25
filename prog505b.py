@@ -7,5 +7,6 @@ try:
         for line in f:
             hi = line
             grade.append(hi)
+
 except Exception as e:
     print("Error:", e)
