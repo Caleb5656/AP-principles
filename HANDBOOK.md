@@ -1,8 +1,8 @@
-<h1>Handbook on Programming in ?????</h1>
+<h1>Handbook on Programming in Python</h1>
 
 **AP Computer Science Principles 2023-2024**
 
-FirstName LastName
+Caleb Raddatz
 
 <!-- This is a comment (which will not be displayed in the live file);
 replace all "???" with your own text. -->
@@ -111,7 +111,9 @@ ___
 
 # 4. Arithmetic Operations
 
-???
+These are ways of doing mathmatical operations on numbers and include:
+
+**+ - * / %**
 
 
 
@@ -139,7 +141,7 @@ ___
 
 # 6. Comments
 
-???
+comments are made using a (**#**), making a comment causes the text to only be readable by the programmer and ignored when the program is ran
 
 
 
@@ -225,7 +227,13 @@ ___
 
 # 11. String Methods
 
-???
+.trim removes the spaces in a string
+
+.find looks for a given string within the original string
+
+.casefold makes a string lowercase
+
+.
 
 
 
