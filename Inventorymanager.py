@@ -61,12 +61,14 @@ def main():
 
                 else:
                     count[loc] = count[loc] - sold
-                    solds.append(items[loc] + " " + str(sale))
+                    solds.append(items[loc] + " sold: " + str(sold))
             else:
                 print("Item not contained in inventory please try again: ")
 
         if task == "inventory":
             inventory(items, count)
+            for i in solds:
+                print(i)
 
         while task == "restock":
 
