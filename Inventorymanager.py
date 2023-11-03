@@ -5,6 +5,11 @@ def restock(item, amt, tcount, titems):
     return tcount
 
 
+def inventory(l1, l2):
+    for l in range(0, len(l1)):
+        print("Item: ", l1[l], " count: ", l2[l])
+
+
 def main():
     count = []
     items = []
@@ -15,7 +20,8 @@ def main():
                      "'inventory' to print out the inventory or 'restock' "
                      "to increase amount in inventory, 'remove' to get rid of something in inventory "
                      "'done' to end task and 'quit' to end inventory management: ").lower()
-        if task == "quit": break
+        if task == "quit":
+            break
 
         while task == "add":
 
@@ -43,6 +49,7 @@ def main():
             sale = input("Enter the item: ").lower().capitalize()
 
             if sale == "Done":
+                task = ""
                 break
             if items.__contains__(sale):
                 loc = items.index(sale)
@@ -57,8 +64,7 @@ def main():
                 print("Item not contained in inventory please try again: ")
 
         if task == "inventory":
-            for l in range(0, len(items)):
-                print("Item: ", items[l], " count: ", count[l])
+            inventory(items, count)
 
         while task == "restock":
 
