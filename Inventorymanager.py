@@ -13,6 +13,7 @@ def inventory(l1, l2):
 def main():
     count = []
     items = []
+    solds = []
     while input != "quit":
 
         task = input("'Add' to put into inventory tracking or "
@@ -60,6 +61,7 @@ def main():
 
                 else:
                     count[loc] = count[loc] - sold
+                    solds.append(items[loc] + " " + str(sale))
             else:
                 print("Item not contained in inventory please try again: ")
 
