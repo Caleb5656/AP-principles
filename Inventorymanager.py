@@ -1,3 +1,4 @@
+
 # Inventory Manager: Keep track of stock levels, sales, and reorders.
 def restock(item, amt, tcount, titems):
     loc = titems.index(item)
