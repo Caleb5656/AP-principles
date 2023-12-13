@@ -2,7 +2,11 @@
 # calc GPA
 # calc Grade in class
 def main():
-    name =
+    name = input("Enter the name of the student: ")
+    Schedule = []
+
+    for i in range (1,9):
+        cls = input("")
 
 if __name__ == 'main':
     main()
