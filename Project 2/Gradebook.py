@@ -1,18 +1,18 @@
-import tkinter as tk
-import tkinter.messagebox
+from tkinter import *
+#import tkinter as tk
 from tkinter import ttk
 #Gradebook: Store, modify, and calculate student grades.
 # calc GPA
 # calc Grade in class
-root = tk.Tk()
+root = Tk()
 root.title("Gradebook")
 
-def main():
-    name = input("Enter the name of the student: ")
-    Schedule = []
 
-    for i in range (1,9):
-        cls = input("")
+mainframe = ttk.Frame(root, padding="7 3 12 12")
+mainframe.grid(column=0, row=0, sticky=(N, W, E, S))
+root.columnconfigure(0, weight=1)
+root.rowconfigure(0, weight=1)
 
-if __name__ == 'main':
-    main()
+
+
+root.mainloop()
