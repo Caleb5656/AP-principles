@@ -13,8 +13,9 @@ def get_name():
     tab_control.pack(expand=1, fill="both")
     stu_add_txt.delete(0, END)
 root = tk.Tk()
+root.geometry("300x300")
 root.title("Gradebook")
-root.configure(bg='green')
+root.configure(bg="red")
 tab_control = ttk.Notebook(root)
 
 reg_tab = ttk.Frame(tab_control)
@@ -26,12 +27,12 @@ tab_control.pack(expand=1, fill="both")
 # root.columnconfigure(0, weight=1)
 # root.rowconfigure(0, weight=1)
 
-stu_add_lbl = tk.Label(reg_tab,text="Enter the students name into the box", bg='green')
+stu_add_lbl = tk.Label(reg_tab,text="Enter the students name into the box", bg='blue')
 stu_add_lbl.pack()
 stu_add_txt = tk.Entry(reg_tab)
 stu_add_txt.pack()
 
-stu_add_btn = tk.Button(reg_tab, text="Add Student", command=get_name)
+stu_add_btn = tk.Button(reg_tab, text="Add Student", command=get_name, bg='grey')
 stu_add_btn.pack()
 
 
