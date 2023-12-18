@@ -1,15 +1,20 @@
 
 import tkinter as tk
-from tkinter import ttk
+from tkinter import END, ttk
 #Gradebook: Store, modify, and calculate student grades.
 # calc GPA
 # calc Grade in class
-def get_name(name):
+def get_name():
     stu_name = stu_add_txt.get()
-    print(stu_name)
+    
+    
+    sched_tab = ttk.Frame(tab_control)
+    tab_control.add(sched_tab, text=stu_name)
+    tab_control.pack(expand=1, fill="both")
+    stu_add_txt.delete(0, END)
 root = tk.Tk()
 root.title("Gradebook")
-
+root.configure(bg='green')
 tab_control = ttk.Notebook(root)
 
 reg_tab = ttk.Frame(tab_control)
@@ -21,7 +26,7 @@ tab_control.pack(expand=1, fill="both")
 # root.columnconfigure(0, weight=1)
 # root.rowconfigure(0, weight=1)
 
-stu_add_lbl = tk.Label(reg_tab,text="Enter the students name into the box")
+stu_add_lbl = tk.Label(reg_tab,text="Enter the students name into the box", bg='green')
 stu_add_lbl.pack()
 stu_add_txt = tk.Entry(reg_tab)
 stu_add_txt.pack()
