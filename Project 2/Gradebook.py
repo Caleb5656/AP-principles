@@ -1,5 +1,6 @@
 
 import tkinter as tk
+import tkinter.messagebox
 from tkinter import END, ttk
 #Gradebook: Store, modify, and calculate student grades.
 # calc GPA
@@ -8,13 +9,14 @@ def get_name():
     stu_name = stu_add_txt.get()
     if stu_name == "":
         msg="Enter a students name first!"
-        msg_box = tk.(text=msg)
-        msg_box.pack()
+        tkinter.messagebox.showinfo("Error", msg)
     else:
+        global sched_tab
         sched_tab = ttk.Frame(tab_control)
         tab_control.add(sched_tab, text=stu_name)
         tab_control.pack(expand=1, fill="both")
         stu_add_txt.delete(0, END)
+
 root = tk.Tk()
 root.geometry("300x300")
 root.title("Gradebook")
