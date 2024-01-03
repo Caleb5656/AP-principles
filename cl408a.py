@@ -1,3 +1,6 @@
-class sort:
-    def __it__(self, other):
-        self
+class cl408a:
+    def __init__(self, id, score):
+        self.id = id
+        self.score = score
+    def __lt__(self, other):
+        return self.score < other.score
