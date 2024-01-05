@@ -9,18 +9,14 @@ class Sort:
                     temp = self.other[j]
                     self.other[j] = self.other[j + 1]
                     self.other[j + 1] = temp
-        return self.other
 
-    def SelectionSort(A):
-        for i in range (0,len(A) - 1):
+
+    def selection_sort(self):
+        for i in range(0, len(self.other) - 1):
             min_index = i
-        for j in range(i,len(A)):
-            if A[j] < A[min_index]:
-                min_index = j
-            Swap
-            A[i] and A[min
-            index]
-            end
-            for
-                end
-                procedure
+            for j in range(i, len(self.other)):
+                if self.other[j] < self.other[min_index]:
+                    min_index = j
+            temp = self.other[min_index]
+            self.other[min_index] = self.other[i]
+            self.other[i] = temp
