@@ -2,7 +2,7 @@ class Sort:
     def __init__(self, other):
         self.other = other
 
-    def bubble(self) -> object:
+    def bubble(self):
         for i in range(0, len(self.other) - 1):
             for j in range(0, len(self.other) - i - 1):
                 if self.other[j] > self.other[j + 1]:
@@ -20,3 +20,5 @@ class Sort:
             temp = self.other[min_index]
             self.other[min_index] = self.other[i]
             self.other[i] = temp
+
+    def insertion_sort(self):
