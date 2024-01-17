@@ -10,7 +10,6 @@ class Sort:
                     self.other[j] = self.other[j + 1]
                     self.other[j + 1] = temp
 
-
     def selection_sort(self):
         for i in range(0, len(self.other) - 1):
             min_index = i
@@ -22,17 +21,12 @@ class Sort:
             self.other[i] = temp
 
     def insertion_sort(self):
-        for i in range(1,len(A)):
+        for i in range(1, len(self.other)):
 
-        key = A[i]
-        j = i - 1
-        while j >= 0 and A[j] > key do
-        A[j + 1] = A[j]
-        j = j - 1
-        end
-        while
-            A[j + 1] = key
-        end
-        for
-            end
-            procedure
+            key = self.other[i]
+            j = i - 1
+            while j >= 0 and self.other[j] > key:
+                self.other[j + 1] = self.other[j]
+                j = j - 1
+
+            self.other[j + 1] = key
