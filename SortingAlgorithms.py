@@ -30,3 +30,4 @@ class Sort:
                 j = j - 1
 
             self.other[j + 1] = key
+
