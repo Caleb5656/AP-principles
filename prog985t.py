@@ -1,13 +1,13 @@
 class MergeSort:
     @staticmethod
-    def sort(A:list):
+    def sort(A):
         if len(A) > 1:
-            middle = int(len(A) / 2)
-            L = A[0:middle-1]
+            middle = len(A) // 2
+            L = A[0:middle]
             R = A[middle:len(A)]
-            L = MergeSort.sort(L)
-            R = MergeSort.sort(R)
-            A =MergeSort.Merge(A, L, R)
+            MergeSort.sort(L)
+            MergeSort.sort(R)
+            MergeSort.Merge(A, L, R)
         return A
 
     @staticmethod
