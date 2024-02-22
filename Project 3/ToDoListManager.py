@@ -2,10 +2,22 @@ import tkinter as tk
 import tkinter.messagebox
 from tkinter import END, ttk
 
+global to_do_list
+
+
 def add():
-  with open("toDoList", "w") as f:
-    f.write(add_txt.get())
-  add_txt.delete(0,END)
+    with open("toDoList", "w") as f:
+        f.write(add_txt.get())
+    add_txt.delete(0, END)
+    update()
+
+
+def update():
+    with open("toDoList", 'r') as f:
+        for line in f:
+            to_do_list.append(f)
+    return to_do_list
+
 
 root = tk.Tk()
 root.geometry("300x300")
@@ -28,8 +40,12 @@ add_lbl = tk.Label(add_tab, bg='grey', text="Input tasks you want to add to the 
 add_lbl.pack()
 add_txt = tk.Entry(add_tab, borderwidth=5)
 add_txt.pack()
-add_btn = tk.Button(command=add,text="Add to to do list.")
+add_btn = tk.Button(command=add, text="Add to to do list.")
 add_btn.pack()
+boxes = {}
+for item in to_do_list:
+
+    boxes[item] = ttk.Checkbox(view_tab, text=item)
 root.mainloop()
 # with open("toDoList", "w") as f:
 #   f.write(input())
