@@ -136,6 +136,8 @@ def register_user():
     # Pop up a messagebox if account registration is successful or if the username already exists
     u_name = reg_username_entry.get()
     u_pass = reg_password_entry.get()
+    u_pass = hashlib.sha256(u_pass)
+    print(u_pass)
     ...
     pass
 

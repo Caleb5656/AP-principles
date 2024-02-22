@@ -4,8 +4,8 @@ from tkinter import END, ttk
 
 def add():
   with open("toDoList", "w") as f:
-    f.write(input())
-
+    f.write(add_txt.get())
+  add_txt.delete(0,END)
 
 root = tk.Tk()
 root.geometry("300x300")
@@ -26,10 +26,10 @@ tab_control.pack(expand=1, fill="both")
 
 add_lbl = tk.Label(add_tab, bg='grey', text="Input tasks you want to add to the list")
 add_lbl.pack()
-add_txt = tk.Text()
-
-
-
+add_txt = tk.Entry(add_tab, borderwidth=5)
+add_txt.pack()
+add_btn = tk.Button(command=add,text="Add to to do list.")
+add_btn.pack()
 root.mainloop()
 # with open("toDoList", "w") as f:
 #   f.write(input())
