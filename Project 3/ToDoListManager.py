@@ -1,9 +1,9 @@
 import tkinter as tk
 import tkinter.messagebox
 from tkinter import END, ttk
-
+import numpy as np
 global to_do_list
-
+to_do_list=[]
 
 def add():
     with open("toDoList", "w") as f:
@@ -13,10 +13,11 @@ def add():
 
 
 def update():
+    global to_do_list
     with open("toDoList", 'r') as f:
         for line in f:
-            to_do_list.append(f)
-    return to_do_list
+            to_do_list.append(line)
+    print(to_do_list)
 
 
 root = tk.Tk()
@@ -45,7 +46,8 @@ add_btn.pack()
 boxes = {}
 for item in to_do_list:
 
-    boxes[item] = ttk.Checkbox(view_tab, text=item)
+     boxes[item] = ttk.Checkbox(view_tab, text=item)
+
 root.mainloop()
 # with open("toDoList", "w") as f:
 #   f.write(input())
