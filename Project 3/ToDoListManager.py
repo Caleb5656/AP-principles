@@ -2,12 +2,14 @@ import tkinter as tk
 import tkinter.messagebox
 from tkinter import END, ttk
 import numpy as np
-global to_do_list
-to_do_list=[]
 
-def add():
+global to_do_list
+to_do_list = []
+
+
+def add(text):
     with open("toDoList", "w") as f:
-        f.write(add_txt.get())
+        f.write(text)
     add_txt.delete(0, END)
     update()
 
@@ -41,12 +43,12 @@ add_lbl = tk.Label(add_tab, bg='grey', text="Input tasks you want to add to the 
 add_lbl.pack()
 add_txt = tk.Entry(add_tab, borderwidth=5)
 add_txt.pack()
-add_btn = tk.Button(command=add, text="Add to to do list.")
+txt = add_txt.get()
+add_btn = tk.Button(command=lambda: add(txt), text="Add to to do list.")
 add_btn.pack()
 boxes = {}
 for item in to_do_list:
-
-     boxes[item] = ttk.Checkbox(view_tab, text=item)
+    boxes[item] = ttk.Checkbox(view_tab, text=item)
 
 root.mainloop()
 # with open("toDoList", "w") as f:
