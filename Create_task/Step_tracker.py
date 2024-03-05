@@ -3,3 +3,9 @@ def isEnough(num):
         return False
     else:
         return True
+def main():
+    steps = {}
+
+
+if __name__=="main":
+    main()
