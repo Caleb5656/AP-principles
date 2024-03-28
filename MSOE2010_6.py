@@ -1,7 +1,7 @@
 n = int(input("Enter the number of vertices for the polygon: "))
 x_coord = []
 y_coord = []
-for i in range(0,n-1):
+for i in range(0,n):
     x = float(input(f"Enter the x-Coordinate for the vertex #{i+1}"))
     y = float(input(f"Enter the y-Coordinate for the vertex #{i+1}"))
     x_coord.append(x)
